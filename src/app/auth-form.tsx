@@ -50,7 +50,7 @@ export default function AuthForm() {
             {isBooked ? (
                 <div className="space-y-6 animate-in fade-in slide-in-from-bottom duration-500">
                 <PartyPopper className="mx-auto h-12 w-12 text-rose-500" />
-                <h2 className="text-2xl font-bold text-rose-600">It's a Date! 💖</h2>
+                <h2 className="text-2xl font-bold text-rose-600">It&apos;s a Date! 💖</h2>
                 <div className="space-y-4 text-lg">
                     <p className="flex items-center justify-center gap-2">
                     <CalendarHeart className="text-rose-500" />
@@ -70,7 +70,7 @@ export default function AuthForm() {
                     <span>Venue: {selectedRestaurant}</span>
                     </p>
                 </div>
-                <p className="text-rose-600 font-medium text-xl mt-6">Can't wait to see you! 🌹</p>
+                <p className="text-rose-600 font-medium text-xl mt-6">Can&apos;t wait to see you! 🌹</p>
                 </div>
             ) : (
                 <>
@@ -84,9 +84,9 @@ export default function AuthForm() {
                         onSelect={setSelectedDate}
                         disabled={(date) => {
                         return (
-                            date < new Date() || // Can't select past dates
-                            date > getNextMonthDate() || // Can't select beyond next month
-                            !isWeekend(date) // Only weekends are selectable
+                            date < new Date() || 
+                            date > getNextMonthDate() ||
+                            !isWeekend(date)
                         )
                         }}
                         className="rounded-md border shadow"
@@ -207,7 +207,7 @@ export default function AuthForm() {
             <div>
                 <Input
                 type="password"
-                placeholder="PS: it's your name in small 😜"
+                placeholder="PS: it&apos;s your name in small 😜"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="border-rose-200 focus:border-rose-500 focus:ring-rose-500"
